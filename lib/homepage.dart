@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Padding(padding: EdgeInsets.only(top: 20)),
                         OutlinedButton(
-                          onPressed: () async {
+                          onPressed: () {
                             print('Received click');
                             runApp(Profile());
                           },

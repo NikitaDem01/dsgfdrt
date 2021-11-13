@@ -53,9 +53,7 @@ class _SignUpPageState extends State {
           children: <Widget>[
             GestureDetector(
             onTap: () {
-              Navigator.push(
-                context, MaterialPageRoute(builder: (BuildContext context) => LoginPage())
-              );
+              runApp(Profile());
             },              
               child: Container(   
                 padding: const EdgeInsets.only(left: 25.0, top: 35.0),
@@ -168,9 +166,7 @@ _getBottomRow(context){
       children: <Widget>[
         GestureDetector(
             onTap: () {
-              Navigator.push(
-                context, MaterialPageRoute(builder: (BuildContext context) => LoginPage())
-              );
+              runApp(Profile());
             },
             child: Text(
               'Sign In',
