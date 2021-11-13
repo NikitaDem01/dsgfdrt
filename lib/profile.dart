@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:app/signup.dart';
+import 'package:app/statistic.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:app/global.dart' as glob;
@@ -136,11 +137,16 @@ _getSingIn() {
         children: <Widget>[
           Text('Sign In', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
             ),
-          CircleAvatar(
+GestureDetector(
+            onTap: () {
+              runApp(Statistic());
+            },
+            child: CircleAvatar(
             backgroundColor: Colors.grey.shade800,
             radius: 40,
             child: Icon(Icons.arrow_forward_ios, color: Colors.white,),
-          )
+          ),
+            ),
         ],
       ),
    );

@@ -125,17 +125,19 @@ _getSignUp(){
                 fontWeight: FontWeight.w500,
                 color: Colors.black),
               ),
-            CircleAvatar(
-              backgroundColor: Colors.grey.shade800,
-              radius: 40,
-              child: Icon(
-                Icons.arrow_forward_ios,
-                color: Colors.white,
-              ),
-            ),
-          ],
+GestureDetector(
+            onTap: () {
+              runApp(Profile());
+            },
+            child: CircleAvatar(
+            backgroundColor: Colors.grey.shade800,
+            radius: 40,
+            child: Icon(Icons.arrow_forward_ios, color: Colors.white,),
+          ),
         ),
-      );
+      ],
+    ),
+  );
 }
 
 _getBottomRow(context){

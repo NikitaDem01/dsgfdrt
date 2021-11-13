@@ -38,7 +38,7 @@ class _TaskTimeState extends State<TaskTime> {
           primaryColor: Colors.blue,
         ),
         home: Scaffold(
-          body: RandomTask()
+          body: RandomTask(),
         )
     );
   }
@@ -48,6 +48,7 @@ class _TaskTimeState extends State<TaskTime> {
     switch(m) {
       case 0:
         return Container(
+          
             padding: const EdgeInsets.fromLTRB(40.0, 10.0, 40.0, 10.0),
             child: new Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -77,18 +78,25 @@ class _TaskTimeState extends State<TaskTime> {
             child: new Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                
                 TasksnoImage(),
-                new TextField(
-                  controller: _controller,
-                  decoration: new InputDecoration(labelText: "Enter your number"),
-                  keyboardType: TextInputType.number,
-                  inputFormatters: <TextInputFormatter>[FilteringTextInputFormatter.digitsOnly],
-                  onSubmitted: (String value) {
-                  },
+           new TextField(
+              controller: _controller,
+              decoration: new InputDecoration(
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.black)
                 ),
-              ],
-            )
-        );
+                labelText: 'Enter your number',
+                labelStyle: TextStyle(color: Colors.black), 
+              ),
+              keyboardType: TextInputType.number,
+                inputFormatters: <TextInputFormatter>[FilteringTextInputFormatter.digitsOnly],
+                onSubmitted: (String value) {
+              },
+            ),
+          ],
+        )
+      );
     }
     return Container(
 
